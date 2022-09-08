@@ -6,56 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="272dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="88dp"
-        android:orientation="horizontal"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Enumber1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
         app:layout_constraintBottom_toTopOf="@+id/multiply"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/number1"
-            android:layout_width="135dp"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:text="x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No."
             android:textAlignment="center"
-            android:textSize="20sp" />
+            tools:ignore="DuplicateClickableBoundsCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Enumber2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/number2"
-            android:layout_width="141dp"
-            android:layout_height="match_parent"
-            android:inputType="number"
-            android:numeric="integer"
-            android:text="x"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No."
+            android:textAlignment="center" />
 
-    </LinearLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/multiply"
         android:layout_width="202dp"
         android:layout_height="67dp"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="252dp"
         android:text="@string/multiply"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Enumber1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintTop_toBottomOf="@+id/Enumber2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

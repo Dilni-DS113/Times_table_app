@@ -22,22 +22,9 @@ class MainActivity : AppCompatActivity() {
         number2.text = rnumber2.toString()
 
         multiply.setOnClickListener {
-            val intent = Intent(this,productActivity::class.java).apply {
-                // ------ paracelable object ------
-                putExtra("product", product(rnumber1*rnumber2))
-            }
+            val intent = Intent(this,productActivity::class.java)
+            intent.putExtra("product", rnumber1*rnumber2) // sending this data of the two number mulplied togther named product to the prodcut activity
             startActivity(intent)
-
-            // ---- sending multiple data values using an intent -----
-            //  putExtra("number1", rnumber1)
-            //  putExtra("number2",rnumber2)
-            // ------ Sending a single data value ------
-           // intent.putExtra("product", rnumber1*rnumber2) // sending this data of the two number mulplied togther named product to the prodcut activity
-            //startActivity(intent)
-                // note there is a way to send two things (ie the two numbers) instead of one.
-                // watch this for intructions--> https://swinburne.instructure.com/courses/44802/pages/solutions-multiples-core?module_item_id=2777338
-
-
 
         }
 
